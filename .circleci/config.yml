@@ -3,8 +3,8 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    executor:
-      name: node/default
+    docker:
+      - image: cimg/base:stable
       tag: '10.4'
     steps:
       - checkout
