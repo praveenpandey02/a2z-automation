@@ -15,7 +15,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-              - run: npm install
+            - run: npm install
       - run: npm run test
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
@@ -35,4 +35,7 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - build
+      - say-hello:
+          requires:
+            - build
