@@ -4,7 +4,7 @@ describe("These tests will check if all links are working or not", () => {
   it("Check all links", () => {
     cy.visit("/");
     cy.get("ul > li > a").each(($el) => {
-      cy.log("**" + $el.text() + "**");
+      cy.log("**" + $el.text() + "**********************************");
       if ($el.text() !== "Digest Authentication") {
         if ($el.text() === "Basic Auth") {
           cy.request(
