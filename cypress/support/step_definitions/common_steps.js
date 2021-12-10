@@ -9,7 +9,6 @@ Given("I am on the {string} page", (end_point_url) => {
       break;
     case "ADD/REMOVE ELEMENTS":
       cy.visit("/add_remove_elements/");
-
       break;
     default:
       throw console.error("You've entered a wrong page name");
@@ -23,9 +22,11 @@ Then(
       case "A/B TESTING":
         cy.get("h3").should("contain", "A/B Test");
         break;
-
-      default:
+      case "ADD/REMOVE ELEMENTS":
+        cy.get("h3").should("contain", "Add/Remove Elements");
         break;
+      default:
+        throw console.error("You've entered a wrong page name");
     }
   }
 );
