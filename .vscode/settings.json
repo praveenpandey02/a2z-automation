@@ -1,6 +1,6 @@
 {
   "cucumberautocomplete.steps": ["cypress/support/step_definitions/*.js"],
-  "cucumberautocomplete.strictGherkinCompletion": false,
+  "cucumberautocomplete.strictGherkinCompletion": true,
   "cucumberautocomplete.onTypeFormat": true,
   "editor.quickSuggestions": {
     "other": true,
