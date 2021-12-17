@@ -10,26 +10,18 @@ Given("I am on the {string} page", (end_point_url) => {
     case "ADD/REMOVE ELEMENTS":
       cy.visit("/add_remove_elements/");
       break;
+    case "BROKEN IMAGES":
+      cy.visit("/broken_images");
+      break;
     default:
+      console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
   }
 });
 
-Then(
-  "I verify that header for page {string} is displayed as expected",
-  (page_name) => {
-    switch (page_name.toUpperCase()) {
-      case "A/B TESTING":
-        cy.get("h3").should("contain", "A/B Test");
-        break;
-      case "ADD/REMOVE ELEMENTS":
-        cy.get("h3").should("contain", "Add/Remove Elements");
-        break;
-      default:
-        throw console.error("You've entered a wrong page name");
-    }
-  }
-);
+Then("I verify that page header is displayed as {string}", (page_header) => {
+  cy.get("h3").should("contain", page_header);
+});
 
 Then(
   "I verify that paragraph for page {string} is displayed as expected",
