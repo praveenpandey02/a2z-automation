@@ -12,7 +12,10 @@
     "cypress": "^9.1.1"
   },
   "dependencies": {
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "fs-extra": "^10.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.3",
+    "path": "^0.12.7"
   },
   "cypress-cucucmber-preprocessor": {
     "nonGlobalStepDefinitions": false,
