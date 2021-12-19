@@ -20,6 +20,6 @@ Feature: Challenging DOM
     Scenario: Verify that the table has 10 rows excluding the column headers
         Then I verify that table has 10 rows
 
-    #This scenario is in development and does not work right now
+    #TODO Need to find a way to reach edit and delete links in the last column
     #Scenario: Verify that each table row has EDIT and DELETE links
     #Then I verify that each row has Edit and Delete link
