@@ -22,6 +22,9 @@ Given("I am on the {string} page", (end_point_url) => {
     case "CONTEXT MENU":
       cy.visit("/context_menu");
       break;
+    case "DISAPPEARING ELEMENTS":
+      cy.visit("/disappearing_elements");
+      break;
     default:
       console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
@@ -54,3 +57,7 @@ Then(
     }
   }
 );
+
+Then("I verify that I am on the main page", () => {
+  cy.url().should("eq", "https://the-internet.herokuapp.com/");
+});
