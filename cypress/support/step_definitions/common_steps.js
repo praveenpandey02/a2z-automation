@@ -25,6 +25,9 @@ Given("I am on the {string} page", (end_point_url) => {
     case "DISAPPEARING ELEMENTS":
       cy.visit("/disappearing_elements");
       break;
+    case "DRAG AND DROP":
+      cy.visit("/drag_and_drop");
+      break;
     default:
       console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
