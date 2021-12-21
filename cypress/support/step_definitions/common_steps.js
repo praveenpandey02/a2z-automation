@@ -28,6 +28,9 @@ Given("I am on the {string} page", (end_point_url) => {
     case "DRAG AND DROP":
       cy.visit("/drag_and_drop");
       break;
+    case "DROPDOWN":
+      cy.visit("/dropdown");
+      break;
     default:
       console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
