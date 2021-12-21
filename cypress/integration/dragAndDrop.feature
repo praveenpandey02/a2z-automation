@@ -9,6 +9,6 @@ Feature: Drag and Drop
     Scenario: Verify that there are 2 boxes
         Then I verify that there are 2 boxes on the page
 
-    #TODO Need to understand drag and drop
+    #TODO Need to understand drag and drop mechanism
     # Scenario: Verify that first box is A and 2nd box is B
     #     Then I verify that 1st box is A and 2nd box is B
