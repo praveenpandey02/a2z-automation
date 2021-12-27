@@ -18,7 +18,6 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-require('cypress-dark')
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
