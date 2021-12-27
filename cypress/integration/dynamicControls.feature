@@ -21,4 +21,20 @@ Feature: Dynamic Controls
         And I verify that It's back message is displayed
         And I verify that the only checkbox is unchecked
 
+    Scenario: Verify that the text field is disabled by default but when Enable button is clicked, it's editable
+        Then I verify that the text field is disabled
+
+        When I click on the Enable button
+
+        Then I verify that Wait For It progress bar appears and disappears on it's own
+        And I verify that It's enabled message is displayed
+        And I verify that the text field is enabled
+
+        When I click on Disable button
+
+        Then I verify that Wait For It progress bar appears and disappears on it's own
+        And I verify that It's disabled message is displayed
+        And I verify that the text field is disabled
+
+
 
