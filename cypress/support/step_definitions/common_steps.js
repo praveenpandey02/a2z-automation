@@ -31,6 +31,9 @@ Given("I am on the {string} page", (end_point_url) => {
     case "DROPDOWN":
       cy.visit("/dropdown");
       break;
+    case "DYNAMIC CONTROLS":
+      cy.visit("/dynamic_controls");
+      break;
     default:
       console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
@@ -40,6 +43,10 @@ Given("I am on the {string} page", (end_point_url) => {
 Then("I verify that page header is displayed as {string}", (page_header) => {
   cy.get("h3").should("contain", page_header);
 });
+
+Then("I verify that page header is displayed as DYNAMIC CONTROLS", () => {
+  cy.get("h4").should("contain", "Dynamic Controls");
+})
 
 Then(
   "I verify that paragraph for page {string} is displayed as expected",
