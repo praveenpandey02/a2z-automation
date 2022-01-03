@@ -5,3 +5,6 @@ workflows:
   build-and-run-tests:
     jobs:
       - cypress/run
+      only:
+        - merge_requests
+
