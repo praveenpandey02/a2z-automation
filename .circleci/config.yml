@@ -3,8 +3,10 @@ orbs:
   cypress: cypress-io/cypress@1
 workflows:
   build-and-run-tests:
-    job:
-      - cypress/run
-      only:
-        - merge_requests
+    jobs:
+      - cypress/run:
+          filters:
+            branches:
+              ignore:
+                main
 
