@@ -3,7 +3,7 @@ orbs:
   cypress: cypress-io/cypress@1
 workflows:
   build-and-run-tests:
-    jobs:
+    job:
       - cypress/run
       only:
         - merge_requests
