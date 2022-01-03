@@ -4,4 +4,9 @@ orbs:
 workflows:
   build-and-run-tests:
     jobs:
-      - cypress/run
+      - cypress/run:
+          filters:
+            branches:
+              ignore:
+                main
+
