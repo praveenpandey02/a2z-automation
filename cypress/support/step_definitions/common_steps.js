@@ -40,6 +40,9 @@ Given("I am on the {string} page", (end_point_url) => {
     case "EXIT INTENT":
       cy.visit("/exit_intent");
       break;
+    case "FILE DOWNLOAD":
+      cy.visit("/download");
+      break;
     default:
       console.log("You have entered an invalid page name");
       throw console.error("You've entered a wrong page name");
