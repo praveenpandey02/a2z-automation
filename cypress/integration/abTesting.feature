@@ -10,3 +10,4 @@ Feature: A/B Test
 
     Scenario: Verify that A/B Test paragraph has the correct content
         Then I verify that paragraph for page "A/B Testing" is displayed as expected
+
